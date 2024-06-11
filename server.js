@@ -35,7 +35,7 @@ app.post('/login', async (req, res) => {
             const userData = doc.data();
             if (userData.password === password) {
                 console.log(`User ${username} logged in successfully`);
-                res.redirect('https://www.flipkart.com'); // Redirect to Flipkart
+                res.redirect('https://www.flipkart.com'); 
             } else {
                 console.log('Incorrect password');
                 res.redirect('/login?error=incorrect_password');
@@ -65,7 +65,7 @@ app.post('/register', async (req, res) => {
                 password,
             });
             console.log('User registered');
-            res.redirect('https://www.flipkart.com'); // Redirect to Flipkart
+            res.redirect('https://www.flipkart.com'); 
         }
     } catch (error) {
         console.error('Error registering user:', error);
